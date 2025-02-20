@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function toggleShopPopup() {
+            var popup = document.getElementById('shop-popup');
+            popup.classList.toggle('show');
+        }
+    </script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="image/Classifit.png" id="logo" width="130" height="auto" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="shop.html" onclick="toggleShopPopup()">Shop</a>
+            <a href="category.html">Category</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            <a href="#" id="cart-button"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-header">
+            <h1>Log In</h1>
+        </div>
+        <div class="login-content">
+            <div class="login-form">
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="create-account.html">Create Account</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,265 @@
+/* Default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: black; /* Changed to black */
+    color: white; /* Ensure text color is white for better contrast */
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.search-bar {
+    flex-grow: 3px;
+    text-align: center;
+}
+
+#logo {
+    position: relative;
+    right: 0px;
+    border-radius: 20px;
+}
+
+.search-bar input {
+    width: 75%;
+    padding: 8px;
+    border-radius: 5px;
+    border: static;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white; /* Ensure menu links are white for better contrast */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    text-decoration: none;
+}
+
+.menu a i {
+    margin-right: 5px;
+    color: white; /* Ensure the icon color is white */
+}
+
+.menu a i:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+.shop-categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.shop-category {
+    text-align: center;
+    width: 30%;
+}
+
+.shop-category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-category h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.shop-category a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.shop-category a:hover {
+    background-color: #333;
+}
+
+.men-clothes {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.men-clothes h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.clothes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.clothes-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clothes-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clothes-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+.product-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.product-grid.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.product-item {
+    flex: 0 0 auto;
+    width: 30%;
+    text-align: center;
+    margin-right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-item .price {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.product-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-item .btn:hover {
+    background-color: #333;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .product-item, .clothes-item {
+        width: 45%; /* Adjust product and clothes items to take up less space on larger tablets */
+    }
+
+    .shop-category {
+        width: 45%; /* Adjust shop category size on larger tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item, .clothes-item {
+        width: 100%; /* Make items full-width on tablets and smaller devices */
+    }
+
+    .shop-category {
+        width: 100%; /* Make categories stack on smaller screens */
+    }
+
+    .header {
+        flex-direction: column; /* Stack header items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 90%; /* Make the search bar input larger on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px; /* Reduce padding for very small screens */
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 80%; /* Adjust input width for better fit */
+    }
+}
